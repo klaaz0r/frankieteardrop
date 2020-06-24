@@ -1,209 +1,169 @@
-import Head from 'next/head'
+import Head from "next/head";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
       </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <section
+        className="section section-lg bg-secondary overflow-hidden z-2"
+        style={{ height: "100vh", marginBottom: -38, overflowY: "auto" }}
+      >
+        <div className="container z-2">
+          <div className="row justify-content-center pt-6 pt-md-5 pb-0 mb-2">
+            <div className="col-11">
+              <img
+                src={require("../images/logo.gif")}
+                style={{ width: "100%" }}
+              />
+            </div>
+          </div>
         </div>
-      </main>
 
+        <div class="container">
+          <div class="row">
+            {/* Sidebar */}
+            <div class="col-md-4">
+              <div className="card card-success">
+                <div className="card-header ">
+                  <span>Spotify</span>
+                </div>
+                <div className="card-body">
+                  <p className="card-text">Joyrocket is live on spotify</p>
+                  <div className="d-flex mt-3">
+                    <a
+                      href="https://open.spotify.com/artist/2UebVjs2njKEH0mWbCLDmQ"
+                      target="_blank"
+                      className="btn btn-sm mb-2 mb-lg-0 mr-2 btn-primary border-dark"
+                      role="button"
+                    >
+                      <span className="btn-text">🎧 Listen on spotify</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-tertiary mt-2">
+                <div className="card-header">
+                  <span>Social</span>
+                </div>
+                <div className="card-body">
+                  <p className="card-text">It's just a status update</p>
+                  <div className="d-flex mt-3">
+                    <a
+                      href="https://www.instagram.com/20yearoldfrankie"
+                      target="_blank"
+                      className="btn btn-sm mb-2 mb-lg-0 mr-2 btn-primary border-dark"
+                      role="button"
+                    >
+                      <span className="btn-text">Instagram</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-2">
+                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                  <li className="nav-item">
+                    <a
+                      className="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="../#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+                <div className="tab-content" id="myTabContent">
+                  <div
+                    className="tab-pane show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <p>We are a band that makes music.</p>
+                    <img
+                      src={require("../images/salad.jpg")}
+                      style={{ width: "100%" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Main content */}
+            <div class="col-md-8">
+              <div className="card card-tertiary">
+                <div className="card-header text-center">
+                  <span>Frankie Teardrop Homepage</span>
+                </div>
+                <div className="card-body">
+                  <h3 className="card-text">what a fucking time to be alive</h3>
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/jPE2j79EAEI"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4 offset-md-4"></div>
+            <div class="col-md-3 offset-md-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-2"></div>
+          </div>
+        </div>
+      </section>
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <nav
+          id="navbar-footer"
+          className="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
+          <ul className="navbar-nav navbar-nav-hover flex-row align-items-center">
+            {/* <li className="nav-item">
+              <a href="../index.html" className="nav-link" role="button">
+                <span className="nav-link-inner-text">📺 Start</span>
+              </a>
+            </li> */}
+            <li className="nav-item">
+              <a href="introduction.html" className="nav-link" role="button">
+                <span className="nav-link-inner-text">📕 Bookings</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://themesberg.com/product/ui-kits/windows-95-ui-kit"
+                target="_blank"
+                className="nav-link"
+                role="button"
+              >
+                <span className="nav-link-inner-text">🌟 Fanmail</span>
+              </a>
+            </li>
+          </ul>
+          <div className="time text-center">14:20 am</div>
+        </nav>
       </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
-  )
+  );
 }
