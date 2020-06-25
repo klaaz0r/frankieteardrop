@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>franie teardrop</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -16,11 +16,11 @@ export default function Home() {
       </Head>
 
       <section
-        className="section section-lg bg-secondary overflow-hidden z-2"
-        style={{ height: "100vh", marginBottom: -38, overflowY: "auto" }}
+        className="section section-lg bg-secondary z-2"
+        style={{ height: "100vh", marginBottom: -38, overflowY: "scroll" }}
       >
         <div className="container z-2">
-          <div className="row justify-content-center pt-6 pt-md-5 pb-0 mb-2">
+          <div className="row justify-content-center pb-0 mb-2">
             <div className="col-11">
               <img
                 src={require("../images/logo.gif")}
@@ -32,9 +32,29 @@ export default function Home() {
 
         <div class="container">
           <div class="row">
+
+            {/* Main content */}
+            <div class="col-md-8">
+              <div className="card card-tertiary">
+                <div className="card-header text-center">
+                  <span>Frankie Teardrop Homepage</span>
+                </div>
+                <div className="card-body">
+                  <h3 className="card-text">what a fucking time to be alive</h3>
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/jPE2j79EAEI"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
             {/* Sidebar */}
             <div class="col-md-4">
-              <div className="card card-success">
+              <div className="card card-success mt-2 mt-md-0">
                 <div className="card-header ">
                   <span>Spotify</span>
                 </div>
@@ -105,25 +125,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Main content */}
-            <div class="col-md-8">
-              <div className="card card-tertiary">
-                <div className="card-header text-center">
-                  <span>Frankie Teardrop Homepage</span>
-                </div>
-                <div className="card-body">
-                  <h3 className="card-text">what a fucking time to be alive</h3>
-                  <iframe
-                    width="100%"
-                    height="500"
-                    src="https://www.youtube.com/embed/jPE2j79EAEI"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="row mt-4">
             <div class="col-md-4 offset-md-4"></div>
@@ -140,19 +141,14 @@ export default function Home() {
           className="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer"
         >
           <ul className="navbar-nav navbar-nav-hover flex-row align-items-center">
-            {/* <li className="nav-item">
-              <a href="../index.html" className="nav-link" role="button">
-                <span className="nav-link-inner-text">📺 Start</span>
-              </a>
-            </li> */}
             <li className="nav-item">
-              <a href="introduction.html" className="nav-link" role="button">
+              <a href="mailto:20yearoldfrankie@gmail.com" className="nav-link" role="button">
                 <span className="nav-link-inner-text">📕 Bookings</span>
               </a>
             </li>
             <li className="nav-item">
               <a
-                href="https://themesberg.com/product/ui-kits/windows-95-ui-kit"
+                href="mailto:20yearoldfrankie@gmail.com"
                 target="_blank"
                 className="nav-link"
                 role="button"
