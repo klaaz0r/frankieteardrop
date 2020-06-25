@@ -40,7 +40,7 @@ export default function Home() {
                   <span>Frankie Teardrop Homepage</span>
                 </div>
                 <div className="card-body">
-                  <h3 className="card-text">what a fucking time to be alive</h3>
+                  <h3 className="card-text">what a f*cking time to be alive</h3>
                   <iframe
                     width="100%"
                     height="500"
